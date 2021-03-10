@@ -1,0 +1,13 @@
+name: Jira Deployment Action
+description: Mark Jira tickets as deployed
+inputs:
+  ticket-regex:
+    description: "Regular Expression to find tickets"
+    required: true
+    default: "[A-Z]+-[0-9]+"
+outputs:
+  tickets:
+    description: Tickets sent to Jira
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
