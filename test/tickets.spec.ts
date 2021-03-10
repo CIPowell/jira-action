@@ -1,4 +1,4 @@
-const { getTickets } = require('../src/tickets');
+const { getTickets } = require("../src/tickets");
 
 describe("Use Octokit to get Jira tickets from ", () => {
   it("Should get the right tickets from the commit", () => {

@@ -10,5 +10,5 @@ const getTickets = (core, { context }) => {
 };
 
 module.exports = {
-  getTickets
+  getTickets,
 };
