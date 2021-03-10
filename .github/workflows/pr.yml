@@ -14,3 +14,7 @@ jobs:
       - run: npm install
       - name: Prettier
         run: npx prettier --check .
+      - name: Danger
+        run: npx danger ci
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
