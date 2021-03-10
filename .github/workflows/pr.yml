@@ -14,6 +14,8 @@ jobs:
       - run: npm install
       - name: Prettier
         run: npx prettier --check .
+      - name: Tests
+        run: npm test
       - name: Danger
         run: npx danger ci
         env:
