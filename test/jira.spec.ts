@@ -13,5 +13,14 @@ describe("Jira Client", () => {
     }
   });
 
-  it("should send a valid request", () => {});
+  it("should set the tickets correctly", () => {
+    const output = JSON.parse(client.getDeployBody(["CIP-2"]));
+
+    expect(output.deployments).toHaveLength(1);
+    expect(output.deployments[0].associations).toHaveLength(1);
+    expect(output.deployments[0].associations[0].associationType).toBe(
+      "issueIdOrKeys"
+    );
+    expect(output.deployments[0].associations[0].values).toEqual(["CIP-2"]);
+  });
 });
