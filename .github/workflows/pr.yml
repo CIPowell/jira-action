@@ -18,3 +18,5 @@ jobs:
         run: npx danger ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Test run
+        uses: ./
