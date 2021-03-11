@@ -18,10 +18,7 @@ describe("Use Octokit to get Jira tickets from ", () => {
       },
     };
 
-    getTickets(core, github);
-
-    expect(core.setOutput).toHaveBeenCalled();
-    expect(core.setOutput).toHaveBeenCalledWith("tickets", "CIP-2");
+    expect(getTickets(github)).toEqual(["CIP-2"]);
   });
 
   it("Should get the right tickets from the commit", () => {
@@ -44,9 +41,6 @@ describe("Use Octokit to get Jira tickets from ", () => {
       },
     };
 
-    getTickets(core, github);
-
-    expect(core.setOutput).toHaveBeenCalled();
-    expect(core.setOutput).toHaveBeenCalledWith("tickets", "CIP-2,CIP-4");
+    expect(getTickets(github)).toEqual(["CIP-2", "CIP-4"]);
   });
 });

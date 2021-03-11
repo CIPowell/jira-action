@@ -2,8 +2,8 @@ const template = `{
   "properties": {},
   "deployments": [
     {
-      "deploymentSequenceNumber": "{{ deploymentSequenceNumber }}",
-      "updateSequenceNumber": "{{ updateSequenceNumber }}",
+      "deploymentSequenceNumber": {{ deploymentSequenceNumber }},
+      "updateSequenceNumber": {{ updateSequenceNumber }},
       "associations": [
         {
           "associationType": "issueIdOrKeys",
